@@ -20,11 +20,14 @@ from django.urls import path, include
 
 from django.conf import settings
 from django.conf.urls.static import static
+from django.shortcuts import redirect
+
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('allNurse/', include('nurses.urls')),
+    path('', lambda request: redirect('home')),
 ]
 
 
