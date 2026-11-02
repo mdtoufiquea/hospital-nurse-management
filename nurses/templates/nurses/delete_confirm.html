@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Nurse</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#F5F8FC] min-h-screen flex items-center justify-center p-5">
+
+    <div class="bg-white max-w-md w-full rounded-3xl shadow-lg p-8 text-center">
+
+        <div class="w-20 h-20 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto text-4xl">
+            !
+        </div>
+
+        <h1 class="text-2xl font-extrabold text-slate-800 mt-6">
+            Delete Nurse?
+        </h1>
+
+        <p class="text-slate-500 mt-3">
+            Are you sure you want to delete
+            <span class="font-bold text-slate-800">
+                {{ nurse.name }}
+            </span>?
+        </p>
+
+        <p class="text-sm text-red-500 mt-2">
+            This action cannot be undone.
+        </p>
+
+        <form method="POST" class="flex gap-3 mt-8">
+            {% csrf_token %}
+
+            <button
+                type="submit"
+                class="flex-1 bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-xl transition"
+            >
+                Yes, Delete
+            </button>
+
+            <a
+                href="{% url 'home' %}"
+                class="flex-1 bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold py-3 rounded-xl transition"
+            >
+                Cancel
+            </a>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#F5F8FC] min-h-screen">
+
+    <div class="max-w-3xl mx-auto px-5 py-12">
+
+        <div class="bg-white rounded-3xl shadow-lg p-8 md:p-10">
+
+            <div class="mb-8">
+                <h1 class="text-3xl font-extrabold text-slate-800">
+                    {{ title }}
+                </h1>
+
+                <p class="text-slate-500 mt-2">
+                    Enter the nurse information below.
+                </p>
+            </div>
+
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    {% for field in form %}
+                        <div class="flex flex-col gap-2">
+
+                            <label class="font-semibold text-slate-700">
+                                {{ field.label }}
+                            </label>
+
+                            {{ field }}
+
+                            {% if field.errors %}
+                                <p class="text-red-500 text-sm">
+                                    {{ field.errors|striptags }}
+                                </p>
+                            {% endif %}
+
+                        </div>
+                    {% endfor %}
+
+                </div>
+
+                {% if form.non_field_errors %}
+                    <div class="mt-4 text-red-500">
+                        {{ form.non_field_errors }}
+                    </div>
+                {% endif %}
+
+                <div class="flex flex-wrap gap-4 mt-8">
+
+                    <button
+                        type="submit"
+                        class="bg-teal-600 hover:bg-teal-700 text-white font-bold px-8 py-3 rounded-xl transition"
+                    >
+                        {{ button_text }}
+                    </button>
+
+                    <a
+                        href="{% url 'home' %}"
+                        class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold px-8 py-3 rounded-xl transition"
+                    >
+                        Cancel
+                    </a>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,718 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MediCare | Nursing Excellence</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['DM Sans', 'sans-serif'],
+                        heading: ['Manrope', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: '#102A43',
+                        teal: '#0D9488',
+                        mint: '#E6FFFA',
+                        skyblue: '#EFF8FF',
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+
+<body class="bg-[#F5F8FC] text-slate-800 font-sans">
+
+    <!-- NAVBAR -->
+
+    <nav class="bg-white/95 backdrop-blur-md border-b border-slate-100 sticky top-0 z-50">
+
+        <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+            <div class="h-20 flex justify-between items-center">
+
+                <!-- Logo -->
+
+                <a href="/allNurse/" class="flex items-center gap-3">
+
+                    <div class="w-11 h-11 rounded-xl bg-teal-600 flex items-center justify-center text-green-500 text-4xl font-bold shadow-lg shadow-teal-200">
+                        +
+                    </div>
+
+                    <div>
+                        <h1 class="text-2xl font-extrabold font-heading text-navy">
+                            Medi<span class="text-teal-600">Care.</span>
+                        </h1>
+
+                        <p class="text-[10px] tracking-[3px] text-slate-400 font-bold">
+                            HEALTHCARE SYSTEM
+                        </p>
+                    </div>
+
+                </a>
+
+
+                <!-- Navigation -->
+
+                <div class="hidden md:flex items-center gap-9 text-sm font-semibold text-slate-600">
+
+                    <a href="/allNurse/" class="text-teal-600">
+                        Home
+                    </a>
+
+                    <a href="#nurses" class="hover:text-teal-600 transition">
+                        Our Nurses
+                    </a>
+
+                    <a href="#about" class="hover:text-teal-600 transition">
+                        About Us
+                    </a>
+
+                    <a href="#footer" class="hover:text-teal-600 transition">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <!-- Admin Button -->
+
+                <a href="/admin/"
+                   class="bg-navy hover:bg-teal-700 text-white px-5 py-3 rounded-xl text-sm font-bold transition shadow-lg shadow-slate-200">
+
+                    Admin Portal →
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- HERO SECTION -->
+
+    <section class="relative overflow-hidden bg-gradient-to-br from-[#102A43] via-[#123D54] to-[#087E80]">
+
+        <!-- Background Decoration -->
+
+        <div class="absolute -top-32 -right-20 w-96 h-96 bg-teal-400/20 rounded-full blur-3xl"></div>
+
+        <div class="absolute -bottom-40 -left-20 w-96 h-96 bg-sky-400/20 rounded-full blur-3xl"></div>
+
+
+        <div class="relative max-w-7xl mx-auto px-6 lg:px-8 py-24 lg:py-32">
+
+            <div class="max-w-4xl mx-auto text-center">
+
+                <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-5 py-2 rounded-full text-teal-100 text-xs md:text-sm font-bold tracking-widest mb-8">
+
+                    <span class="w-2 h-2 bg-emerald-400 rounded-full"></span>
+
+                    HOSPITAL NURSE MANAGEMENT SYSTEM
+
+                </div>
+
+
+                <h2 class="text-4xl md:text-6xl lg:text-7xl font-extrabold font-heading text-white leading-tight">
+
+                    Compassion in Care.
+
+                    <span class="block text-teal-300">
+                        Excellence in Nursing.
+                    </span>
+
+                </h2>
+
+
+                <p class="max-w-2xl mx-auto text-slate-200 text-base md:text-lg leading-8 mt-7">
+
+                    Meet our dedicated healthcare professionals who bring
+                    knowledge, experience and compassion to every patient,
+                    every day.
+
+                </p>
+
+
+                <div class="flex flex-wrap justify-center gap-4 mt-10">
+
+                    <a href="#nurses"
+                       class="bg-teal-400 hover:bg-teal-300 text-black font-extrabold px-8 py-4 rounded-xl transition shadow-xl shadow-teal-950/20">
+
+                        Explore Our Nurses →
+
+                    </a>
+
+                    <a href="/admin/"
+                       class="border border-white/30 hover:bg-white/10 text-white font-bold px-8 py-4 rounded-xl transition">
+
+                        Admin Portal
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- STATS SECTION -->
+
+    <section class="relative max-w-6xl mx-auto px-6 -mt-10 z-10">
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+
+            <div class="bg-white rounded-2xl p-7 text-center shadow-xl shadow-slate-200/60 border border-slate-100">
+
+                <h3 class="text-4xl font-extrabold text-teal-600">
+                    {{ nurses|length }}
+                </h3>
+
+                <p class="text-slate-500 font-semibold mt-2">
+                    Registered Nurses
+                </p>
+
+            </div>
+
+
+            <div class="bg-white rounded-2xl p-7 text-center shadow-xl shadow-slate-200/60 border border-slate-100">
+
+                <h3 class="text-4xl font-extrabold text-navy">
+                    Quality
+                </h3>
+
+                <p class="text-slate-500 font-semibold mt-2">
+                    Professional Healthcare
+                </p>
+
+            </div>
+
+
+            <div class="bg-white rounded-2xl p-7 text-center shadow-xl shadow-slate-200/60 border border-slate-100">
+
+                <h3 class="text-4xl font-extrabold text-teal-600">
+                    24/7
+                </h3>
+
+                <p class="text-slate-500 font-semibold mt-2">
+                    Dedicated Care
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- NURSE SECTION -->
+
+    <section id="nurses" class="max-w-7xl mx-auto px-6 lg:px-8 py-24">
+
+        <!-- Section Heading -->
+
+        <div class="text-center max-w-2xl mx-auto mb-16">
+
+            <span class="text-teal-600 font-extrabold text-sm tracking-[3px]">
+                MEET OUR TEAM
+            </span>
+
+            <h2 class="text-4xl md:text-5xl font-extrabold font-heading text-navy mt-4">
+                Our Professional Nurses
+            </h2>
+
+            <p class="text-slate-500 leading-7 mt-5">
+
+                Discover our experienced nursing professionals.
+                Each member of our team is dedicated to providing
+                excellent patient care.
+
+            </p>
+
+            <div class="w-20 h-1.5 bg-teal-500 rounded-full mx-auto mt-7"></div>
+
+        </div>
+
+
+       
+<!-- Search and Filter Section -->
+<div class="mb-10">
+
+    <div class="bg-white rounded-3xl shadow-md border border-slate-100 p-6">
+
+        <form method="GET" action="{% url 'home' %}"
+              class="grid grid-cols-1 md:grid-cols-4 gap-4">
+
+            <!-- Search Input -->
+            <input
+                type="text"
+                name="search"
+                value="{{ search_query }}"
+                placeholder="Search by name, ID, email..."
+                class="md:col-span-2 w-full px-5 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500"
+            >
+
+            <!-- Department Filter -->
+            <select
+                name="department"
+                class="w-full px-5 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500"
+            >
+                <option value="">All Departments</option>
+
+                {% for dept in departments %}
+                    <option
+                        value="{{ dept }}"
+                        {% if selected_department == dept %}selected{% endif %}
+                    >
+                        {{ dept }}
+                    </option>
+                {% endfor %}
+
+            </select>
+
+            <!-- Search Button -->
+            <button
+                type="submit"
+                class="bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-xl px-6 py-3 transition"
+            >
+                Search
+            </button>
+
+        </form>
+
+        <!-- Bottom Actions -->
+        <div class="flex flex-wrap justify-between items-center gap-4 mt-5">
+
+            <p class="text-slate-500 text-sm">
+                Search and filter nurses by department.
+            </p>
+
+            <div class="flex gap-3">
+
+                <!-- Reset Filter -->
+                <a
+                    href="{% url 'home' %}"
+                    class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold px-5 py-3 rounded-xl transition"
+                >
+                    Reset
+                </a>
+
+                <!-- Add Nurse -->
+                <a
+                    href="{% url 'add_nurse' %}"
+                    class="bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-3 rounded-xl transition"
+                >
+                    + Add New Nurse
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+            
+
+
+        <!-- Nurse Cards -->
+
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+
+
+            {% for nurse in nurses %}
+
+
+            <div class="group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+
+                <!-- Nurse Image -->
+
+                <div class="relative bg-gradient-to-br from-[#E6FFFA] to-[#EFF8FF] p-5">
+
+                    <div class="relative h-72 md:h-80 bg-white rounded-2xl overflow-hidden flex items-center justify-center">
+
+                        {% if nurse.image %}
+
+                            <img
+                                src="{{ nurse.image.url }}"
+                                alt="{{ nurse.name }}"
+                                class="w-full h-full object-contain p-2 group-hover:scale-105 transition duration-500"
+                            >
+
+                        {% else %}
+
+                            <div class="w-40 h-40 rounded-full bg-teal-100 flex items-center justify-center text-teal-700 text-6xl font-extrabold">
+
+                                {{ nurse.name|first }}
+
+                            </div>
+
+                        {% endif %}
+
+                    </div>
+
+
+                    <!-- Department Badge -->
+
+                    <div class="absolute bottom-8 left-8 bg-teal-600 text-gray-600 text-xl font-bold px-4 py-2 rounded-full shadow-lg">
+
+                        {{ nurse.department }}
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Nurse Information -->
+
+                <div class="p-7">
+
+                    <div class="mb-6">
+
+                        <p class="text-xs font-extrabold text-teal-600 tracking-widest uppercase">
+
+                            NURSE ID: {{ nurse.nurse_id }}
+
+                        </p>
+
+                        <h3 class="text-2xl font-extrabold font-heading text-navy mt-2">
+
+                            {{ nurse.name }}
+
+                        </h3>
+
+                        <p class="text-slate-400 text-sm mt-1">
+
+                            Nursing Professional
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="border-t border-slate-100 pt-5 space-y-4">
+
+
+                        <div class="flex justify-between items-center text-sm">
+
+                            <span class="text-slate-500 font-medium">
+                                Age
+                            </span>
+
+                            <span class="text-navy font-bold">
+                                {{ nurse.age }} Years
+                            </span>
+
+                        </div>
+
+
+                        <div class="flex justify-between items-center text-sm">
+
+                            <span class="text-slate-500 font-medium">
+                                Gender
+                            </span>
+
+                            <span class="text-navy font-bold">
+                                {{ nurse.gender }}
+                            </span>
+
+                        </div>
+
+
+                        <div class="flex justify-between items-center text-sm">
+
+                            <span class="text-slate-500 font-medium">
+                                Experience
+                            </span>
+
+                            <span class="text-navy font-bold">
+                                {{ nurse.experience }} Years
+                            </span>
+
+                        </div>
+
+
+                        <div class="flex justify-between items-center text-sm gap-3">
+
+                            <span class="text-slate-500 font-medium">
+                                Phone
+                            </span>
+
+                            <span class="text-navy font-bold text-right">
+                                {{ nurse.phone }}
+                            </span>
+
+                        </div>
+
+
+                        <div class="flex justify-between items-start text-sm gap-3">
+
+                            <span class="text-slate-500 font-medium">
+                                Email
+                            </span>
+
+                            <span class="text-navy font-bold text-right break-all max-w-[65%]">
+                                {{ nurse.email }}
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- Bottom Label -->
+
+                    <div class="mt-7 pt-5 border-t border-slate-100">
+
+                        <div class="flex items-center justify-between">
+
+                            <span class="text-xs font-bold text-slate-400 tracking-wider">
+                                MEDICARE HEALTHCARE
+                            </span>
+
+                            <span class="text-teal-600 font-bold text-sm">
+                                Verified ✓
+                            </span>
+
+                        </div>
+
+                    </div>
+                    <!-- Edit and Delete Buttons -->
+<div class="flex gap-3 mt-5">
+
+    <a
+        href="{% url 'edit_nurse' nurse.id %}"
+        class="flex-1 text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition"
+    >
+        Edit
+    </a>
+
+    <a
+        href="{% url 'delete_nurse' nurse.id %}"
+        class="flex-1 text-center bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-xl transition"
+    >
+        Delete
+    </a>
+
+</div>
+
+                </div>
+                
+
+            </div>
+
+
+            {% empty %}
+
+
+            <div class="col-span-full bg-white rounded-3xl p-16 text-center shadow-sm">
+
+                <div class="text-5xl mb-5">
+                    🏥
+                </div>
+
+                <h3 class="text-2xl font-bold text-navy">
+                    No Nurses Found
+                </h3>
+
+                <p class="text-slate-500 mt-3">
+                    Please add nurse information from the admin panel.
+                </p>
+
+                <a href="/admin/"
+                   class="inline-block mt-6 bg-teal-600 text-white px-7 py-3 rounded-xl font-bold hover:bg-teal-700 transition">
+
+                    Add New Nurse
+
+                </a>
+
+            </div>
+
+
+            {% endfor %}
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ABOUT SECTION -->
+
+    <section id="about" class="bg-white border-y border-slate-100">
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-20">
+
+            <div class="max-w-3xl mx-auto text-center">
+
+                <span class="text-teal-600 font-bold tracking-widest text-sm">
+                    ABOUT MEDICARE
+                </span>
+
+                <h2 class="text-3xl md:text-4xl font-extrabold font-heading text-navy mt-4">
+                    Caring for People, Together.
+                </h2>
+
+                <p class="text-slate-500 leading-8 mt-6">
+
+                    MediCare is a hospital nurse management platform
+                    designed to organize and showcase our nursing team.
+                    We believe that dedicated healthcare professionals
+                    make a meaningful difference in every patient's life.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer id="footer" class="bg-[#102A43] text-white">
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+
+
+                <!-- Footer Logo -->
+
+                <div>
+
+                    <h2 class="text-3xl font-extrabold font-heading">
+                        Medi<span class="text-teal-400">Care.</span>
+                    </h2>
+
+                    <p class="text-slate-400 leading-7 mt-5 max-w-sm">
+
+                        Building a stronger healthcare community
+                        through professional nursing management.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- Quick Links -->
+
+                <div>
+
+                    <h3 class="text-lg font-bold mb-6">
+                        Quick Links
+                    </h3>
+
+                    <div class="space-y-4 text-slate-400 text-sm">
+
+                        <a href="/allnurse/" class="block hover:text-teal-400 transition">
+                            Home
+                        </a>
+
+                        <a href="#nurses" class="block hover:text-teal-400 transition">
+                            Our Nurses
+                        </a>
+
+                        <a href="#about" class="block hover:text-teal-400 transition">
+                            About Us
+                        </a>
+
+                        <a href="/admin/" class="block hover:text-teal-400 transition">
+                            Admin Portal
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Contact -->
+
+                <div>
+
+                    <h3 class="text-lg font-bold mb-6">
+                        Contact Information
+                    </h3>
+
+                    <div class="space-y-4 text-slate-400 text-sm">
+
+                        <p>
+                            Healthcare & Nursing Department
+                        </p>
+
+                        <p>
+                            Professional Medical Services
+                        </p>
+
+                        <p>
+                            Available for patient care 24/7
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- Copyright -->
+
+            <div class="border-t border-white/10 mt-14 pt-8 text-center">
+
+                <p class="text-slate-400 text-sm">
+
+                    © 2026 MediCare Hospital. All Rights Reserved.
+
+                </p>
+
+                <p class="text-teal-400 text-xs mt-3 tracking-widest font-bold">
+
+                    DESIGNED WITH CARE ❤️
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
