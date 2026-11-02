@@ -1,0 +1,152 @@
+[
+{
+  "model": "nurses.nurse",
+  "pk": 1,
+  "fields": {
+    "nurse_id": "NUR001",
+    "name": "Rahim Ahmed",
+    "age": 28,
+    "gender": "Male",
+    "department": "Cardiology",
+    "phone": "01711000001",
+    "email": "rahim@example.com",
+    "experience": 1,
+    "image": "nurse_images/international-medical-student-man-blue-uniform-doctor-with-stethoscope_1157-44745.avif"
+  }
+},
+{
+  "model": "nurses.nurse",
+  "pk": 2,
+  "fields": {
+    "nurse_id": "NUR002",
+    "name": "Nusrat Jahan",
+    "age": 26,
+    "gender": "Female",
+    "department": "Pediatrics",
+    "phone": "01811000002",
+    "email": "nusrat@example.com",
+    "experience": 2,
+    "image": "nurse_images/healthcare-workers-preventing.avif"
+  }
+},
+{
+  "model": "nurses.nurse",
+  "pk": 3,
+  "fields": {
+    "nurse_id": "NUR003",
+    "name": "Karim Hossain",
+    "age": 32,
+    "gender": "Male",
+    "department": "Emergency",
+    "phone": "01911000003",
+    "email": "karim@example.com",
+    "experience": 3,
+    "image": "nurse_images/images.jpg"
+  }
+},
+{
+  "model": "nurses.nurse",
+  "pk": 4,
+  "fields": {
+    "nurse_id": "NUR004",
+    "name": "Fatema Akter",
+    "age": 29,
+    "gender": "Female",
+    "department": "ICU",
+    "phone": "01611000004",
+    "email": "fatema@example.com",
+    "experience": 4,
+    "image": "nurse_images/images_1.jpg"
+  }
+},
+{
+  "model": "nurses.nurse",
+  "pk": 5,
+  "fields": {
+    "nurse_id": "NUR005",
+    "name": "Hasan Mahmud",
+    "age": 30,
+    "gender": "Male",
+    "department": "Neurology",
+    "phone": "01711000005",
+    "email": "hasan@example.com",
+    "experience": 5,
+    "image": "nurse_images/young-male-nurse-laptop-modern-using-56751023.webp"
+  }
+},
+{
+  "model": "nurses.nurse",
+  "pk": 6,
+  "fields": {
+    "nurse_id": "NUR006",
+    "name": "Ayesha Siddika",
+    "age": 25,
+    "gender": "Female",
+    "department": "Gynecology",
+    "phone": "01811000006",
+    "email": "ayesha@example.com",
+    "experience": 6,
+    "image": "nurse_images/medical-professionals-woman-nurse-smiling-working-hospital-young-beautiful_dNFozHQ.webp"
+  }
+},
+{
+  "model": "nurses.nurse",
+  "pk": 7,
+  "fields": {
+    "nurse_id": "NUR007",
+    "name": "Imran Khan",
+    "age": 27,
+    "gender": "Male",
+    "department": "Orthopedics",
+    "phone": "01911000007",
+    "email": "imran@example.com",
+    "experience": 7,
+    "image": "nurse_images/istockphoto-1783744987-612x612.jpg"
+  }
+},
+{
+  "model": "nurses.nurse",
+  "pk": 8,
+  "fields": {
+    "nurse_id": "NUR008",
+    "name": "Sumaiya Islam",
+    "age": 31,
+    "gender": "Female",
+    "department": "Cardiology",
+    "phone": "01611000008",
+    "email": "sumaiya@example.com",
+    "experience": 8,
+    "image": "nurse_images/istockphoto-1412849328-612x612.jpg"
+  }
+},
+{
+  "model": "nurses.nurse",
+  "pk": 9,
+  "fields": {
+    "nurse_id": "NUR009",
+    "name": "Rakib Hasan",
+    "age": 29,
+    "gender": "Male",
+    "department": "Surgery",
+    "phone": "01711000009",
+    "email": "rakib@example.com",
+    "experience": 9,
+    "image": "nurse_images/istockphoto-1186255987-612x612.jpg"
+  }
+},
+{
+  "model": "nurses.nurse",
+  "pk": 10,
+  "fields": {
+    "nurse_id": "NUR010",
+    "name": "Jannatul Ferdous",
+    "age": 28,
+    "gender": "Female",
+    "department": "Emergency",
+    "phone": "01811000010",
+    "email": "jannatul@example.com",
+    "experience": 10,
+    "image": "nurse_images/young-nurse-portrait-isolated-white-background-young-nurse-portrait-138376841.webp"
+  }
+}
+]
